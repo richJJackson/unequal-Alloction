@@ -359,7 +359,22 @@ int <- function(ssn1,ssn2,pow1,pow2,pow_star){
 
 # Estimating the allocation ratio
 binAlloc <- function(p0,p1){
-  A <- sqrt( (p0*(1-p0))/(p1*(1-p1)) )
+  A <- sqrt( (p1*(1-p1))/(p0*(1-p0)) )
   gam <- (1+A)^(-1)
-  gam/(1-gam)
+  gam
 }
+
+(1+binAlloc(0.05,0.25))^(-1)
+
+
+
+
+
+sqrt((0.05*0.95)/(0.25*0.75))
+
+binAlloc(0.05,0.25)
+
+s <- singleStageII(0.05,0.25,0.1,0.9,3)
+s
+
+

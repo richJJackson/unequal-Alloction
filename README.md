@@ -29,6 +29,12 @@ Phase II trial design using unequal allocation ratios
 1 0.1 0.3      0.9        0.1 1.527525 32 21 32 21 106 0.9016 0.0603 0.481  MM
 2 0.1 0.3      0.9        0.1 1.527525 26 17 40 26 109 0.9012 0.0593 0.483 OPT
 
-
+system.time({
+p0<- 0.3
+p1 <- 0.5
+alpha_star <- 0.1
+pow_star <- 0.9
+gamma<-1/binAlloc(p0,p1)
+a <- randPhaseII(p0,p1,alpha_star,pow_star,gamma)})
 
 
